@@ -17,7 +17,7 @@ from homeassistant.const import (
     UnitOfEnergy,
 )
 import homeassistant.helpers.aiohttp_client as client
-from podpointclient.pod import Pod
+from custom_components.pod_point.podpointclient.pod import Pod
 import pytest
 from pytest_homeassistant_custom_component.common import MockConfigEntry
 

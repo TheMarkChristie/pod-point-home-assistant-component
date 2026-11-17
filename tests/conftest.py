@@ -20,8 +20,8 @@ import sys
 from unittest.mock import AsyncMock, MagicMock, patch
 
 import aiohttp
-from podpointclient.errors import AuthError
-from podpointclient.factories import (
+from custom_components.pod_point.podpointclient.errors import AuthError
+from custom_components.pod_point.podpointclient.factories import (
     ChargeFactory,
     ConnectivityStatusFactory,
     FirmwareFactory,
@@ -93,25 +93,25 @@ def bypass_get_data_fixture():
     print(connectivity_status)
 
     with patch(
-        "podpointclient.client.PodPointClient.async_get_all_pods", return_value=pods
+        "custom_components.pod_point.podpointclient.client.PodPointClient.async_get_all_pods", return_value=pods
     ), patch(
-        "podpointclient.client.PodPointClient.async_get_pod", return_value=pod
+        "custom_components.pod_point.podpointclient.client.PodPointClient.async_get_pod", return_value=pod
     ), patch(
-        "podpointclient.client.PodPointClient.async_set_schedule", return_value=True
+        "custom_components.pod_point.podpointclient.client.PodPointClient.async_set_schedule", return_value=True
     ), patch(
-        "podpointclient.client.PodPointClient.async_get_all_charges",
+        "custom_components.pod_point.podpointclient.client.PodPointClient.async_get_all_charges",
         return_value=charges,
     ), patch(
-        "podpointclient.client.PodPointClient.async_credentials_verified",
+        "custom_components.pod_point.podpointclient.client.PodPointClient.async_credentials_verified",
         return_value=True,
     ), patch(
-        "podpointclient.client.PodPointClient.async_get_firmware",
+        "custom_components.pod_point.podpointclient.client.PodPointClient.async_get_firmware",
         return_value=firmware,
     ), patch(
-        "podpointclient.client.PodPointClient.async_get_user",
+        "custom_components.pod_point.podpointclient.client.PodPointClient.async_get_user",
         return_value=user,
     ), patch(
-        "podpointclient.client.PodPointClient.async_get_connectivity_status",
+        "custom_components.pod_point.podpointclient.client.PodPointClient.async_get_connectivity_status",
         return_value=connectivity_status,
     ):
         yield
@@ -126,10 +126,10 @@ def error_get_data_fixture():
     user = user_factory.build_user(USER_COMPLETE_FIXTURE)
 
     with patch(
-        "podpointclient.client.PodPointClient.async_get_pods",
+        "custom_components.pod_point.podpointclient.client.PodPointClient.async_get_pods",
         side_effect=AuthError,
     ), patch(
-        "podpointclient.client.PodPointClient.async_get_user",
+        "custom_components.pod_point.podpointclient.client.PodPointClient.async_get_user",
         return_value=user,
     ):
         yield

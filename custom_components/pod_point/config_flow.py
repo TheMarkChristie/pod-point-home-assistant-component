@@ -10,8 +10,8 @@ from homeassistant.data_entry_flow import FlowResult
 from homeassistant.helpers.aiohttp_client import async_get_clientsession
 from homeassistant.helpers.device_registry import format_mac
 from homeassistant.helpers.selector import TextSelector, TextSelectorConfig, TextSelectorType
-from podpointclient.client import PodPointClient
-from podpointclient.errors import MfaError, MfaInvalidCode, MfaRequired
+from .podpointclient.client import PodPointClient
+from .podpointclient.errors import MfaError, MfaInvalidCode, MfaRequired
 import voluptuous as vol
 
 from .const import (

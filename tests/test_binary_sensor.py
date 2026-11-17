@@ -8,7 +8,7 @@ from homeassistant.components.binary_sensor import (
     BinarySensorEntity,
 )
 from homeassistant.helpers.entity import EntityCategory
-from podpointclient.connectivity_status import ConnectivityStatus, Evse
+from custom_components.pod_point.podpointclient.connectivity_status import ConnectivityStatus, Evse
 import pytest
 from pytest_homeassistant_custom_component.common import MockConfigEntry
 

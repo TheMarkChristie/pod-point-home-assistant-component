@@ -1,6 +1,6 @@
 """Constants for pod_point."""
 
-from podpointclient.version import __version__ as pod_point_client_version
+from .podpointclient.version import __version__ as pod_point_client_version
 
 from .version import __version__ as integration_version
 

@@ -18,9 +18,9 @@ from homeassistant.const import (
     UnitOfEnergy,
 )
 import homeassistant.helpers.aiohttp_client as client
-from podpointclient.charge_mode import ChargeMode
-from podpointclient.pod import Pod
-from podpointclient.schedule import Schedule, ScheduleStatus
+from custom_components.pod_point.podpointclient.charge_mode import ChargeMode
+from custom_components.pod_point.podpointclient.pod import Pod
+from custom_components.pod_point.podpointclient.schedule import Schedule, ScheduleStatus
 import pytest
 from pytest_homeassistant_custom_component.common import MockConfigEntry
 import pytz

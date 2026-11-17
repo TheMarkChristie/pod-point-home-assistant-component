@@ -4,8 +4,8 @@ from datetime import datetime
 import logging
 
 from homeassistant.components.switch import SwitchEntity
-from podpointclient.charge_mode import ChargeMode
-from podpointclient.client import PodPointClient
+from .podpointclient.charge_mode import ChargeMode
+from .podpointclient.client import PodPointClient
 import pytz
 
 from .const import DOMAIN, SWITCH_ICON

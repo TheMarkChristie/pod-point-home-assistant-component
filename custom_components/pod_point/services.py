@@ -6,8 +6,8 @@ from typing import List
 
 from homeassistant.core import HomeAssistant, ServiceCall
 import homeassistant.helpers.config_validation as cv
-from podpointclient.client import PodPointClient
-from podpointclient.pod import Pod
+from .podpointclient.client import PodPointClient
+from .podpointclient.pod import Pod
 import pytz
 import voluptuous as vol
 

@@ -10,12 +10,12 @@ from homeassistant.core import HomeAssistant
 from homeassistant.exceptions import ConfigEntryAuthFailed
 from homeassistant.helpers import issue_registry as ir
 from homeassistant.helpers.update_coordinator import DataUpdateCoordinator, UpdateFailed
-from podpointclient.charge import Charge
-from podpointclient.client import PodPointClient
-from podpointclient.errors import ApiConnectionError, AuthError, SessionError
-from podpointclient.pod import Firmware, Pod
-from podpointclient.schedule import ScheduleStatus
-from podpointclient.user import User
+from .podpointclient.charge import Charge
+from .podpointclient.client import PodPointClient
+from .podpointclient.errors import ApiConnectionError, AuthError, SessionError
+from .podpointclient.pod import Firmware, Pod
+from .podpointclient.schedule import ScheduleStatus
+from .podpointclient.user import User
 import pytz
 
 from .const import DOMAIN, LIMITED_POD_INCLUDES

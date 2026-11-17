@@ -2,7 +2,7 @@
 
 from unittest.mock import patch
 
-from podpointclient.pod import Pod
+from custom_components.pod_point.podpointclient.pod import Pod
 import pytest
 from pytest_homeassistant_custom_component.common import MockConfigEntry
 
@@ -25,7 +25,7 @@ async def test_charge_now_service_with_data(hass, bypass_get_data):
     # Functions/objects can be patched directly in test code as well and can be used to test
     # additional things, like whether a function was called or what arguments it was called with
     with patch(
-        "podpointclient.client.PodPointClient.async_set_charge_override"
+        "custom_components.pod_point.podpointclient.client.PodPointClient.async_set_charge_override"
     ) as title_func:
         await hass.services.async_call(
             DOMAIN,

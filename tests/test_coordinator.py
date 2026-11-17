@@ -7,11 +7,11 @@ from unittest.mock import MagicMock
 
 from homeassistant.exceptions import ConfigEntryAuthFailed, ConfigEntryNotReady
 from homeassistant.helpers.aiohttp_client import async_get_clientsession
-from podpointclient.client import PodPointClient
-from podpointclient.errors import ApiConnectionError, AuthError, SessionError
-from podpointclient.factories import FirmwareFactory, PodFactory, UserFactory
-from podpointclient.pod import Pod
-from podpointclient.user import User
+from custom_components.pod_point.podpointclient.client import PodPointClient
+from custom_components.pod_point.podpointclient.errors import ApiConnectionError, AuthError, SessionError
+from custom_components.pod_point.podpointclient.factories import FirmwareFactory, PodFactory, UserFactory
+from custom_components.pod_point.podpointclient.pod import Pod
+from custom_components.pod_point.podpointclient.user import User
 import pytest
 from pytest_homeassistant_custom_component.common import MockConfigEntry
 

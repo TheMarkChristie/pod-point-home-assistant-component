@@ -5,7 +5,9 @@
     "@mattrayner"
   ],
   "config_flow": true,
-  "dependencies": ["http"],
+  "dependencies": [
+    "http"
+  ],
   "dhcp": [
     {
       "hostname": "podpoint-*",
@@ -560,16 +562,16 @@
       "macaddress": "B0B21C*"
     }
   ],
-  "documentation": "https://github.com/mattrayner/pod-point-home-assistant-component",
+  "documentation": "https://github.com/TheMarkChristie/pod-point-home-assistant-component",
   "integration_type": "hub",
   "iot_class": "cloud_polling",
-  "issue_tracker": "https://github.com/mattrayner/pod-point-home-assistant-component/issues",
+  "issue_tracker": "https://github.com/TheMarkChristie/pod-point-home-assistant-component/issues",
   "quality_scale": "silver",
   "requirements": [
-    "podpointclient @ https://github.com/davidcollom/podpointclient/archive/447c350aba3b9f8420f33a9c31aee032faeab511.tar.gz",
     "StrEnum>=0.4,<0.5",
     "aiodiscover",
-    "scapy"
+    "scapy",
+    "async-timeout"
   ],
-  "version": "2.0.5"
+  "version": "2.1.0"
 }

@@ -8,7 +8,7 @@ from homeassistant.data_entry_flow import FlowResultType
 from homeassistant.helpers.service_info import dhcp
 from homeassistant.core import HomeAssistant
 import pytest
-from podpointclient.errors import MfaInvalidCode, MfaRequired
+from custom_components.pod_point.podpointclient.errors import MfaInvalidCode, MfaRequired
 from pytest_homeassistant_custom_component.common import MockConfigEntry
 
 from custom_components.pod_point.const import (
@@ -217,7 +217,7 @@ async def test_dhcp_login_error(hass: HomeAssistant, bypass_get_data) -> None:
     assert result["type"] == FlowResultType.FORM
     assert result["step_id"] == "user"
     with patch(
-        "podpointclient.client.PodPointClient.async_credentials_verified",
+        "custom_components.pod_point.podpointclient.client.PodPointClient.async_credentials_verified",
         return_value=False,
     ):
         result = await hass.config_entries.flow.async_configure(
